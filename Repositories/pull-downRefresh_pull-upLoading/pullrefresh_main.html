@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
+	<head>  
 		<meta charset="utf-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="../../css/mui.min.css" />
 	</head>
    
-	<body>
+	<body>      
 		<header class="mui-bar mui-bar-nav">
 			<a id="back" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 id="title" class="mui-title">下拉刷新和上拉加载更多</h1>
@@ -19,11 +19,16 @@
 	</body>
 	<script src="../../js/mui.min.js"></script>
 	<script type="text/javascript">
+		/**
+		 * 下拉刷新和上拉加载都由两个webview组成
+		 */
 		//启用双击监听
 		mui.init({
+			/*开启双击手势*/
 			gestureConfig:{
 				doubletap:true
 			},
+			/*创建子页面*/   
 			subpages:[{
 				url:'pullrefresh_sub.html',
 				id:'pullrefresh_sub.html',
@@ -34,11 +39,14 @@
 			}]
 		});
 	
+		/*contentWebview就是子页面*/
 		var contentWebview = null;
 		document.querySelector('header').addEventListener('doubletap',function () {
+			
 			if(contentWebview==null){
 				contentWebview = plus.webview.currentWebview().children()[0];
 			}
+			/*将mui语法转换成js进行执行*/
 			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
 		});
 	</script>

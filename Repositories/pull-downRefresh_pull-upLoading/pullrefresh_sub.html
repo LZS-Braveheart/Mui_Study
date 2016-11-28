@@ -7,11 +7,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
 		<link rel="stylesheet" href="../../css/mui.min.css" />
 	</head>
 
 	<body>
+		<!--为了保证IOS和Android平台的一直性，统一采用相同的Dom结构-->
+		
 		<!--下拉刷新容器-->
 		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
 			<div class="mui-scroll">
@@ -21,6 +22,7 @@
 				</ul>
 			</div>
 		</div>
+		
 		<script type="text/javascript" src="../../js/mui.min.js" ></script>
 		<script>
 			mui.init({
@@ -42,33 +44,42 @@
 				setTimeout(function() {
 					var table = document.body.querySelector('.mui-table-view');
 					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for (var i = cells.length, len = i + 3; i < len; i++) {
+					/*每次下拉刷新新增5个元素*/    
+					for (var i = cells.length, len = i + 5; i < len; i++) {
+						/*创建元素*/
 						var li = document.createElement('li');
 						li.className = 'mui-table-view-cell';
 						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
-						//下拉刷新，新纪录插到最前面；
+						//下拉刷新，新纪录插到最前面；  
 						table.insertBefore(li, table.firstChild);
 					}
+					//完成刷新
 					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
 				}, 1500);
 			}
+			
 			var count = 0;
 			/**
 			 * 上拉加载具体业务实现
 			 */
-			function pullupRefresh() {
+			function pullupRefresh() {  
 				setTimeout(function() {
-					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					/*上拉加载四次后就不能在加载了*/
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 4)); //参数为true代表没有更多数据了。
 					var table = document.body.querySelector('.mui-table-view');
 					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for (var i = cells.length, len = i + 20; i < len; i++) {
+					/*因为每次加载子页面都会先运行pullupRefresh(),所以初始化数量由函数控制*/
+					for (var i = cells.length,len = i + 15; i < len; i++) {
 						var li = document.createElement('li');
 						li.className = 'mui-table-view-cell';
 						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+						/*在末尾添加元素*/
 						table.appendChild(li);
 					}
 				}, 1500);
 			}
+			
+			/*设置设备的启动函数*/
 			if (mui.os.plus) {
 				mui.plusReady(function() {
 					setTimeout(function() {

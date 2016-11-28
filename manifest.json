@@ -211,6 +211,15 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"Repositories/pull-downRefresh_pull-upLoading/pullrefresh_sub.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
