@@ -4,7 +4,11 @@
 			"js/mui.min.js",
 			"Repositories/pull-downRefresh_pull-upLoading/pullrefresh_sub.html",
 			"fonts/mui.ttf",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"images/logo.png",
+			"images/test1.jpg",
+			"images/11.jpg",
+			"images/22.jpg"
 		],
 		"refer": [
 			"Repositories/pull-downRefresh_pull-upLoading/pullrefresh_sub.html"
@@ -14,7 +18,11 @@
 		"resources": [
 			"js/mui.min.js",
 			"css/mui.min.css",
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"images/test1.jpg",
+			"images/test3.gif",
+			"images/11.jpg",
+			"images/22.jpg"
 		]
 	}
 }

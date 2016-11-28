@@ -8,12 +8,47 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<style>
+			/*下拉刷新文字的样式*/
+            .mui-pull-caption {
+                background-image: url(../../images/11.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 144px;
+                height: 28px;
+                font-size: 0px;
+            }
+            /*上拉加载无数据时的背景样式*/
+           .mui-pull-caption .mui-pull-caption-nomore{
+           	background-image: url(../../images/test3.gif);
+           }
+            /*下拉刷新圆形进度条的大小和样式*/
+            .mui-spinner {
+                width: 28px;
+                height: 28px;
+            }
+            .mui-spinner:after {
+                background-image: url(../../images/22.jpg);
+            }
+            /*下拉刷新的箭头颜色*/
+
+            .mui-icon-pulldown {
+                color: #FF058B;   
+            }
+            .mui-pull-caption{
+            	font-size: 0px;
+            }
+            .mui-pull-bottom-pocket .mui-pull-loading{
+            	background-image: url(../../images/22.jpg);
+            }
+		</style>
 	</head>
        
-	<body>      
+	<body>         
 		<header class="mui-bar mui-bar-nav">
 			<a id="back" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 id="title" class="mui-title">下拉刷新和上拉加载更多</h1>
+			<h1 id="title" class="mui-title">下拉刷新和上拉加载更多</h1>   
 		</header>
 		<div class="mui-content"></div>
 	</body>
