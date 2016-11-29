@@ -10,7 +10,7 @@
     "icons": {
         "72": "icon.png"
     },
-    "launch_path": "Repositories/pull-downRefresh_pull-upLoading/pullrefresh_main.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "launch_path": "official-resources/events-manage/event-manage.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
     "developer": {
         "name": "",/*开发者名称*/
         "email": "",/*开发者邮箱地址*/
@@ -225,6 +225,109 @@
 					"images/test3.gif",
 					"images/11.jpg",
 					"images/22.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"official-resources/pull-downRefresh_pull-upLoading/pullrefresh_main.html": {
+				"resources": [
+					"official-resources/pull-downRefresh_pull-upLoading/pullrefresh_sub.html",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"official-resources/windows-manage/page-initialize.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"official-resources/windows-manage/page-sub.html"
+				],
+				"refer": [
+					"official-resources/windows-manage/page-initialize-sub.html"
+				],
+				"priority": 0
+			},
+			"official-resources/pull-downRefresh_pull-upLoading/pullrefresh_sub.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"official-resources/windows-manage/page-sub.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"official-resources/windows-manage/open-a-new-page.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"official-resources/windows-manage/open-a-new-page-sub.html"
+				],
+				"priority": 0
+			},
+			"official-resources/windows-manage/open-a-new-page-sub.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"official-resources/windows-manage/open-a-new-page-eg.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"official-resources/windows-manage/open-a-new-page-eg-sub.html"
+				],
+				"priority": 0
+			},
+			"official-resources/windows-manage/open-a-new-page-eg-sub.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"official-resources/windows-manage/beforehand-loading-sub.html": {
+				"resources": [
+					"official-resources/windows-manage/page-initialize-sub.html",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"official-resources/windows-manage/beforehand-loading.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"official-resources/windows-manage/beforehand-loading-sub.html"
+				],
+				"priority": 0
+			},
+			"official-resources/events-manage/event-manage.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0

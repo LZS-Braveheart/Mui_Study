@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<style>
+			.loading {
+				width: 100%;
+				height: 300px;
+				background-color: deepskyblue;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 0 15px;
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 id="title" class="mui-title">预加载页面</h1>
+		</header>
+		<div class="mui-content">
+			<div class="loading">
+				<span>注意：这是预加载，是提前加载了，但是还没有显示，要用户主动显示的。加快了显示的速度。</span>
+				<button id="A-new-page" type="button" class="mui-btn mui-btn-warning">黄色</button>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script>
+		/*预加载技术就是在用户尚未触发页面跳转时，提前创建目标页面，这样当用户跳转时，
+		 * 就可以立即进行页面切换，节省创建新页面的时间，提升app使用体验。*/
+		mui.init({
+			preloadPages: [{
+				url: 'beforehand-loading-sub.html',
+				id: 'beforehand-loading-sub.html',
+				/*	styles: {}, //窗口参数
+					extras: {}, //自定义扩展参数
+					subpages: [{}, {}] //预加载页面的子页面*/
+			}],
+			preloadLimit: 5 //预加载窗口数量限制(一旦超出,先进先出)默认不限制
+
+		});
+		document.getElementById('A-new-page').addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'beforehand-loading-sub.html',
+				id: 'beforehand-loading-sub.html',
+			});
+		});   
+		/*判断预加载是否成功*/  
+		mui.plusReady(function() {
+			setTimeout(function() {
+				var array = plus.webview.all();
+				if(array) {
+					for(var i = 0, len = array.length; i < len; i++) {
+						console.log(array[i].getURL());
+					}
+				}
+			}, 5000)
+		});
+	</script>
+
+</html>

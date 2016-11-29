@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<style type="text/css">
+			.box-text{
+				color: darkgoldenrod;
+				padding: 0 20px;
+			}
+			.open-button{
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 id="title" class="mui-title">打开一个新页面</h1>
+		</header>
+		<div class="mui-content">
+			<div class="box-text">
+				从A页面打开B页面，B页面为一个需要从服务端加载的列表页面，若在B页面loaded事件发生时就将其显示出来，因服务器数据尚未加载完毕，列表页面为空，用户体验不好；可通过如下方式改善用户体验（最好的用户体验应该是通过预加载的方式）：第一步，B页面loaded事件发生后，不自动显示；
+			</div>
+			<button id="open-button" type="button" class="mui-btn mui-btn-primary open-button">打开新页面</button>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script>
+		/*单webview只承载单个页面的dom，减少dom层级及页面大小；
+		页面切换使用原生动画，将最耗性能的部分交给原生实现.*/
+		document.getElementById('open-button').addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'open-a-new-page-eg-sub.html',
+				id: 'open-a-new-page-eg-sub.html',
+				show: {
+					autoShow: false, //页面loaded事件发生后自动显示，默认为true
+				},
+			});
+		});
+	</script>
+
+</html>
