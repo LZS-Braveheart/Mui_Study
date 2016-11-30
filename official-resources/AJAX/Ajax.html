@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.bg-container {
+				width: 100%;
+				height: 200px;
+				background-color: deepskyblue;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.self-title {
+				font-size: 16px;
+				color: red;
+				font-weight: 800;
+			}
+			
+			.self-content {
+				font-size: 13px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">Ajax</h1>
+		</header>
+		<div class="mui-content">
+
+		</div>
+
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			/*ajax是h5+api*/
+			mui.plusReady(function() {
+				mui.ajax('http://c.m.163.com/nc/article/headline/T1348647853363/0-20.html?from=toutiao&passport=&devId=OPdeGFsVSojY0ILFe6009pLR%2FMsg7TLJv5TjaQQ6Hpjxd%2BaWU4dx4OOCg2vE3noj&size=20&version=5.5.3&spever=false&net=wifi&lat=&lon=&ts=1456985286&sign=%2BY9lXIDh3W7j69unWYNEiSG3So2sMceBy%2B%2FiFf2ZfHh48ErR02zJ6%2FKXOnxX046I&encryption=1&canal=appstore', {
+					dataType: 'json', //服务器返回json格式数据
+					type: 'get', //HTTP请求类型
+					timeout: 1000,
+					/*处理数据成功返回*/
+					success: function(data) {
+						titleDataAnalyze(data);
+					},
+					/*处理异常情况返回*/
+					error: function(error) {
+						console.log("数据返回失败");
+					}
+				});
+			});
+
+			function titleDataAnalyze(data) {
+				var titleOne = data.T1348647853363[0].ads.length;
+				console.log("数组的长度：" + titleOne);
+			}
+		</script>
+	</body>
+
+</html>

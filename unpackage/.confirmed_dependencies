@@ -151,5 +151,11 @@
 			"js/mui.min.js",
 			"css/mui.min.css"
 		]
+	},
+	"official-resources/AJAX/Ajax.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
 	}
 }
