@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			#newsText{
+				height: 80px;
+				background-color: deeppink;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: darkmagenta;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">自定义事件-新闻列表传值-详情页</h1>
+		</header>
+		   
+		<div class="mui-content">
+			<div id="newsText"></div>
+		</div>
+		      
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			window.addEventListener('newsText',function(event){
+				var newsTextDetails=event.detail.newsText;
+				var newsContainer=document.getElementById("newsText");
+				newsContainer.innerText=newsTextDetails;
+			});      
+		</script>
+	</body>
+
+</html>

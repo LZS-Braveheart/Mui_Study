@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">自定义事件-新闻列表传值</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					事件绑定-1
+				</li>
+				<li class="mui-table-view-cell">
+					事件绑定-2
+				</li>
+				<li class="mui-table-view-cell">
+					事件绑定-3
+				</li>
+				<li class="mui-table-view-cell">
+					事件绑定-4
+				</li>
+				<li class="mui-table-view-cell">
+					事件绑定-5
+				</li>
+			</ul>
+		</div>   
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				preloadPages:[{
+					id:'event-DIY-news-details.html',
+					url:'event-DIY-news-details.html'
+				}]   
+			});
+			
+			var detailPage=null;
+			mui('.mui-table-view').on('tap','li',function(){
+				var newsText=this.innerText;
+				//获得详情页面
+				if (!detailPage) {
+					detailPage=plus.webview.getWebviewById('event-DIY-news-details.html');
+				}
+				//触发详情页面的newsText事件
+				mui.fire(detailPage,'newsText',{
+					newsText:newsText
+				});   
+				//打开详情页面
+				mui.openWindow({
+					id:'event-DIY-news-details.html'
+				});
+			})   
+		</script>
+	</body>
+
+</html>
