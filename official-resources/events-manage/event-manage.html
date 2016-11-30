@@ -6,6 +6,30 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<style>
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0px;
+			}
+			.bg-container {
+				width: 100%;
+				height: 100px;
+				background-color: deepskyblue;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.self-title {
+				font-size: 16px;
+				color: red;
+				font-weight: 800;
+			}
+			
+			.self-content {
+				font-size: 13px;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -13,30 +37,58 @@
 			<h1 class="mui-title">事件管理</h1>
 		</header>
 		<div class="mui-content">
-			<ul class="mui-table-view">
+			<ul id="list" class="mui-table-view">
 				<li class="mui-table-view-cell">
-					第一个选项卡子项-1
+					事件绑定-1
 				</li>
 				<li class="mui-table-view-cell">
-					第一个选项卡子项-2
+					事件绑定-2
+				</li> 
+				<li class="mui-table-view-cell">
+					事件绑定-3
 				</li>
 				<li class="mui-table-view-cell">
-					第一个选项卡子项-3
+					事件绑定-4
 				</li>
-				<li class="mui-table-view-cell">
-					第一个选项卡子项-4
-				</li>
-				<li class="mui-table-view-cell">
-					第一个选项卡子项-5
+				<li id="stop" class="mui-table-view-cell">
+					事件绑定-5
 				</li>
 			</ul>
+			<div class="bg-container">
+				<div class="self-title">事件取消</div>
+				<span class="self-content">取消绑定在某个元素上面事件~~~</span>
+				<span class="self-content" style="color: red;">只能取消on绑定的事件！！！</span>
+				<button id="un-banding" type="button" class="mui-btn mui-btn-blue">黄色</button>
+			</div>   
+			<div class="bg-container">
+				<div class="self-title">事件触发</div>
+				<div class="self-content">先绑定事件,然后才进行触发,是自动触发！！！</div>
+				<button id="trigger" type="button" class="mui-btn mui-btn-warning">黄色</button>
+			</div>
 		</div>
 		<script src="../../js/mui.min.js"></script>
 		<script type="text/javascript">
-			mui(".mui-table-view").on('tap','.mui-table-view-cell',function(){
-				var currentText=this.innerText;
+		
+			/*事件绑定*/
+			mui(".mui-table-view").on('tap', '.mui-table-view-cell', function() {
+				var currentText = this.innerText;
 				alert(currentText);
-			})
+			});
+			//事件取消测试
+			var unBanding = document.getElementById("un-banding");
+			unBanding.addEventListener("tap",function(){
+				 mui("#list").off();
+			});
+			
+           
+			/*事件触发*/
+			/*这里是先绑定事件,然后才进行触发*/
+			var btn = document.getElementById("trigger");
+			btn.addEventListener("tap", function() {
+				alert("你点我干嘛~~~");
+			});
+			//触发submit按钮的点击事件
+			//mui.trigger(btn,'tap'); 
 		</script>
 	</body>
 
