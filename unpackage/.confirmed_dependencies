@@ -157,5 +157,11 @@
 			"js/mui.min.js",
 			"css/mui.min.css"
 		]
+	},
+	"Test.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
 	}
 }

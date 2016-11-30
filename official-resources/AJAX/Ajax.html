@@ -26,6 +26,11 @@
 			.self-content {
 				font-size: 13px;
 			}
+			/*修改样式*/
+			.mui-table-view-cell{
+				color: darkgoldenrod;
+				text-align: center;
+			}
 		</style>
 	</head>
 
@@ -33,7 +38,7 @@
 		<header class="mui-bar mui-bar-nav">
 			<h1 class="mui-title">Ajax</h1>
 		</header>
-		<div class="mui-content">
+		<div id="mui-content" class="mui-content">
 
 		</div>
 
@@ -45,7 +50,7 @@
 				mui.ajax('http://c.m.163.com/nc/article/headline/T1348647853363/0-20.html?from=toutiao&passport=&devId=OPdeGFsVSojY0ILFe6009pLR%2FMsg7TLJv5TjaQQ6Hpjxd%2BaWU4dx4OOCg2vE3noj&size=20&version=5.5.3&spever=false&net=wifi&lat=&lon=&ts=1456985286&sign=%2BY9lXIDh3W7j69unWYNEiSG3So2sMceBy%2B%2FiFf2ZfHh48ErR02zJ6%2FKXOnxX046I&encryption=1&canal=appstore', {
 					dataType: 'json', //服务器返回json格式数据
 					type: 'get', //HTTP请求类型
-					timeout: 1000,
+					timeout:1000,//等待相应时间，超出则出现异常
 					/*处理数据成功返回*/
 					success: function(data) {
 						titleDataAnalyze(data);
@@ -54,12 +59,34 @@
 					error: function(error) {
 						console.log("数据返回失败");
 					}
-				});
-			});
+				});   
+			});        
 
 			function titleDataAnalyze(data) {
-				var titleOne = data.T1348647853363[0].ads.length;
-				console.log("数组的长度：" + titleOne);
+				var Ads = data.T1348647853363[0].ads;
+				var AdList = null;
+
+				/*创建ul元素*/
+				var muiTableView = document.createElement('ul');
+				muiTableView.setAttribute("class", "mui-table-view");
+				muiTableView.setAttribute("id", "list");
+				/*将ul元素接到mui-content上*/
+				var muiContent = document.getElementById('mui-content');
+				muiContent.appendChild(muiTableView);
+
+				for(var i = 0; i < Ads.length; i++) {
+					var title = Ads[i].title;
+					/*动态创建元素*/
+					console.log(title);
+
+					/*创建li元素*/
+					var muiTableViewCell = document.createElement('li');
+					muiTableViewCell.setAttribute("class","mui-table-view-cell");
+					/*将内容添加上li上*/  
+					muiTableViewCell.innerText = title;
+					/*将li追加到ui的内后*/   
+					muiTableView.appendChild(muiTableViewCell);
+				}
 			}
 		</script>
 	</body>
