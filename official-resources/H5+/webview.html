@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.bg-container {
+				width: 100%;
+				background-color: deepskyblue;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 8px 0;
+			}
+			
+			.self-title {
+				font-size: 16px;
+				color: red;
+				font-weight: 800;
+			}
+			
+			.self-content {
+				font-size: 13px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">webview</h1>
+		</header>
+		<div class="mui-content">
+			<div class="bg-container">
+				<span class="self-title">创建窗体</span>
+				<div class="self-content"><button onclick="openWebview()">Create</button></div>
+			</div>
+
+		</div>
+
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+		
+			//H5 plus事件处理   
+			function plusReady() {
+				//查找应用首页窗口对象
+//				var mainPage=plus.webview.getWebviewById(plus.runtime.appid);
+//				console.log("应用首页窗口："+mainPage.getURL());
+			}
+			if(window.plus) {
+				plusReady();
+			} else {
+				document.addEventListener("plusready", plusReady, false);
+			}
+
+			//创建并显示webview
+			function create() {
+				var w = plus.webview.create("http://www.baidu.com/");
+				w.show();
+			}
+			
+			//隐藏webview
+			function hide(){
+				plus.webview.hide(plus.webview.currentWebview());
+			}
+			
+			//创建并显示新的窗口
+			function openWebview(){
+				var w=plus.webview.open("http://www.baidu.com/");
+			}
+			
+		</script>
+	</body>
+
+</html>

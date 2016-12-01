@@ -10,7 +10,7 @@
     "icons": {
         "72": "icon.png"
     },
-    "launch_path": "official-resources/AJAX/Ajax.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "launch_path": "demos/M-box/index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
     "developer": {
         "name": "",/*开发者名称*/
         "email": "",/*开发者邮箱地址*/
@@ -390,6 +390,86 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"official-resources/H5+/webview.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"demos/M-box/index.html": {
+				"resources": [
+					"demos/M-box/css/mui.min.css",
+					"demos/M-box/js/mui.min.js",
+					"demos/M-box/fonts/mui.ttf",
+					"demos/M-box/html/home.html",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"demos/M-box/html/setting.html",
+					"demos/M-box/html/message.html",
+					"demos/M-box/html/address.html",
+					"demos/M-box/html/music.html"
+				],
+				"priority": 0
+			},
+			"demos/M-box/html/home.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"demos/M-box/js/mui.lazyload.js",
+					"js/mui.lazyload.img.js",
+					"demos/M-box/img/60x60.gif",
+					"fonts/mui.ttf"
+				],
+				"refer": [
+					"demos/M-box/html/music.html"
+				],
+				"priority": 0
+			},
+			"demos/M-box/html/setting.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"demos/M-box/html/address.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"demos/M-box/html/message.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"official-resources/H5+/XMLHttpRequest.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"demos/M-box/html/music.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -403,7 +483,6 @@
 				"css/icons-extra.css",
 				"js/mui.dtpicker.js",
 				"js/ad.js",
-				"js/mui.lazyload.img.js",
 				"fonts/mui-icons-extra.ttf",
 				"js/mui.zoom.js",
 				"js/mui.listpicker.js",
