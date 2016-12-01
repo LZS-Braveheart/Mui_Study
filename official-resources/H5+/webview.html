@@ -44,18 +44,27 @@
 		<script src="../../js/mui.min.js"></script>
 		<script type="text/javascript">
 		
-			//H5 plus事件处理   
+			//H5 plus事件处理      
 			function plusReady() {
 				//查找应用首页窗口对象
 //				var mainPage=plus.webview.getWebviewById(plus.runtime.appid);
 //				console.log("应用首页窗口："+mainPage.getURL());
+				
+//				窗口层叠关系
+				var ws1=null,  
+					ws2=null,  
+					ws3=null;
+				//获取当前所有webview窗口
+				var ws1=plus.webview.currentWebview();  
+				console.log("~~~webview:~"+plus.webview.all().length+":^^^"+ws1.id);
+				
 			}
 			if(window.plus) {
 				plusReady();
 			} else {
 				document.addEventListener("plusready", plusReady, false);
 			}
-
+   
 			//创建并显示webview
 			function create() {
 				var w = plus.webview.create("http://www.baidu.com/");

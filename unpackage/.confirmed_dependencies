@@ -1,248 +1,248 @@
 {
-	"Repositories/pull-downRefresh_pull-upLoading/pullrefresh_main.html": {
-		"resources": [
-			"js/mui.min.js",
-			"Repositories/pull-downRefresh_pull-upLoading/pullrefresh_sub.html",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"images/logo.png",
-			"images/test1.jpg",
-			"images/11.jpg",
-			"images/22.jpg"
-		],
-		"refer": [
-			"Repositories/pull-downRefresh_pull-upLoading/pullrefresh_sub.html"
-		]
-	},
-	"Repositories/pull-downRefresh_pull-upLoading/pullrefresh_sub.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"fonts/mui.ttf",
-			"images/test1.jpg",
-			"images/test3.gif",
-			"images/11.jpg",
-			"images/22.jpg"
-		],
-		"refer": []
-	},
-	"official-resources/pull-downRefresh_pull-upLoading/pullrefresh_main.html": {
-		"resources": [
-			"official-resources/pull-downRefresh_pull-upLoading/pullrefresh_sub.html",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"official-resources/pull-downRefresh_pull-upLoading/pullrefresh_sub.html"
-		]
-	},
-	"official-resources/windows-manage/page-initialize.html": {
-		"resources": [
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"official-resources/windows-manage/page-sub.html"
-		],
-		"refer": [
-			"official-resources/windows-manage/page-sub.html",
-			"official-resources/windows-manage/page-initialize-sub.html"
-		]
-	},
-	"official-resources/pull-downRefresh_pull-upLoading/pullrefresh_sub.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"fonts/mui.ttf"
-		],
-		"refer": []
-	},
-	"official-resources/windows-manage/page-sub.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"official-resources/windows-manage/open-a-new-page.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"official-resources/windows-manage/open-a-new-page-sub.html"
-		]
-	},
-	"official-resources/windows-manage/open-a-new-page-sub.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"official-resources/windows-manage/open-a-new-page-eg.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"official-resources/windows-manage/open-a-new-page-eg-sub.html"
-		]
-	},
-	"official-resources/windows-manage/open-a-new-page-eg-sub.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"fonts/mui.ttf"
-		],
-		"refer": []
-	},
-	"official-resources/windows-manage/beforehand-loading-sub.html": {
-		"resources": [
-			"official-resources/windows-manage/page-initialize-sub.html",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"official-resources/windows-manage/page-initialize-sub.html"
-		]
-	},
-	"official-resources/windows-manage/beforehand-loading.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"official-resources/windows-manage/beforehand-loading-sub.html"
-		]
-	},
-	"official-resources/events-manage/event-manage.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"official-resources/events-manage/event-gesture.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"official-resources/events-manage/event-DIY-news.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"official-resources/events-manage/event-DIY-news-details.html"
-		]
-	},
-	"official-resources/events-manage/event-DIY-news-details.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"official-resources/events-manage/utils.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"fonts/mui.ttf"
-		],
-		"refer": []
-	},
-	"official-resources/utils/utils.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"official-resources/AJAX/Ajax.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"Test.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"official-resources/H5+/webview.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"demos/M-box/index.html": {
-		"resources": [
-			"demos/M-box/css/mui.min.css",
-			"demos/M-box/js/mui.min.js",
-			"demos/M-box/fonts/mui.ttf",
-			"demos/M-box/html/home.html",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"demos/M-box/html/setting.html",
-			"demos/M-box/html/message.html",
-			"demos/M-box/html/address.html",
-			"demos/M-box/html/home.html",
-			"demos/M-box/html/music.html"
-		]
-	},
-	"demos/M-box/html/home.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"demos/M-box/js/mui.lazyload.js",
-			"js/mui.lazyload.img.js",
-			"demos/M-box/img/60x60.gif",
-			"fonts/mui.ttf"
-		],
-		"refer": [
-			"demos/M-box/html/music.html"
-		]
-	},
-	"demos/M-box/html/setting.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"demos/M-box/html/address.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"demos/M-box/html/message.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		]
-	},
-	"official-resources/H5+/XMLHttpRequest.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		]
-	},
-	"demos/M-box/html/music.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		]
-	}
+  "Repositories/pull-downRefresh_pull-upLoading/pullrefresh_main.html": {
+    "resources": [
+      "js/mui.min.js",
+      "Repositories/pull-downRefresh_pull-upLoading/pullrefresh_sub.html",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/logo.png",
+      "images/test1.jpg",
+      "images/11.jpg",
+      "images/22.jpg"
+    ],
+    "refer": [
+      "Repositories/pull-downRefresh_pull-upLoading/pullrefresh_sub.html"
+    ]
+  },
+  "Repositories/pull-downRefresh_pull-upLoading/pullrefresh_sub.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "images/test1.jpg",
+      "images/test3.gif",
+      "images/11.jpg",
+      "images/22.jpg"
+    ],
+    "refer": []
+  },
+  "official-resources/pull-downRefresh_pull-upLoading/pullrefresh_main.html": {
+    "resources": [
+      "official-resources/pull-downRefresh_pull-upLoading/pullrefresh_sub.html",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "official-resources/pull-downRefresh_pull-upLoading/pullrefresh_sub.html"
+    ]
+  },
+  "official-resources/windows-manage/page-initialize.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "official-resources/windows-manage/page-sub.html"
+    ],
+    "refer": [
+      "official-resources/windows-manage/page-sub.html",
+      "official-resources/windows-manage/page-initialize-sub.html"
+    ]
+  },
+  "official-resources/pull-downRefresh_pull-upLoading/pullrefresh_sub.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "official-resources/windows-manage/page-sub.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "official-resources/windows-manage/open-a-new-page.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "official-resources/windows-manage/open-a-new-page-sub.html"
+    ]
+  },
+  "official-resources/windows-manage/open-a-new-page-sub.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "official-resources/windows-manage/open-a-new-page-eg.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "official-resources/windows-manage/open-a-new-page-eg-sub.html"
+    ]
+  },
+  "official-resources/windows-manage/open-a-new-page-eg-sub.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "official-resources/windows-manage/beforehand-loading-sub.html": {
+    "resources": [
+      "official-resources/windows-manage/page-initialize-sub.html",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "official-resources/windows-manage/page-initialize-sub.html"
+    ]
+  },
+  "official-resources/windows-manage/beforehand-loading.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "official-resources/windows-manage/beforehand-loading-sub.html"
+    ]
+  },
+  "official-resources/events-manage/event-manage.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "official-resources/events-manage/event-gesture.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "official-resources/events-manage/event-DIY-news.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "official-resources/events-manage/event-DIY-news-details.html"
+    ]
+  },
+  "official-resources/events-manage/event-DIY-news-details.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "official-resources/events-manage/utils.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "official-resources/utils/utils.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "official-resources/AJAX/Ajax.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "Test.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "official-resources/H5+/webview.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "demos/M-box/index.html": {
+    "resources": [
+      "demos/M-box/css/mui.min.css",
+      "demos/M-box/js/mui.min.js",
+      "demos/M-box/fonts/mui.ttf",
+      "demos/M-box/html/home.html",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "demos/M-box/html/setting.html",
+      "demos/M-box/html/message.html",
+      "demos/M-box/html/address.html",
+      "demos/M-box/html/home.html",
+      "demos/M-box/html/music.html"
+    ]
+  },
+  "demos/M-box/html/home.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "demos/M-box/js/mui.lazyload.js",
+      "js/mui.lazyload.img.js",
+      "demos/M-box/img/60x60.gif",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "demos/M-box/html/music.html"
+    ]
+  },
+  "demos/M-box/html/setting.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "demos/M-box/html/address.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "demos/M-box/html/message.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ]
+  },
+  "official-resources/H5+/XMLHttpRequest.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ]
+  },
+  "demos/M-box/html/music.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ]
+  }
 }
