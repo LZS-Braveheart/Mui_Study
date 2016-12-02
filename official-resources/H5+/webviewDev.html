@@ -47,9 +47,17 @@
 		
 			//H5 plus事件处理      
 			function plusReady() {
-				//查找应用首页窗口对象
-//				var mainPage=plus.webview.getWebviewById(plus.runtime.appid);
-//				console.log("应用首页窗口："+mainPage.getURL());
+				//获取当前窗口id
+				var ws=plus.webview.currentWebview();
+				console.log("当前窗口标识："+ws.id);  //输出【 当前窗口标识：HBuilder】
+				
+				//通过id获取webview,并关闭窗口
+				var wsq=plus.webview.getWebviewById(id);
+				plus.webview.close(wsq);
+				//等效于
+				plus.webview.getViewById(id).close();
+				
+				
 			}
 			if(window.plus) {
 				plusReady();
@@ -57,22 +65,6 @@
 				document.addEventListener("plusready", plusReady, false);
 			}
    
-			//创建并显示webview
-			function create() {
-				var w = plus.webview.create("http://www.baidu.com/");
-				w.show();
-			}
-			
-			//隐藏webview
-			function hide(){
-				plus.webview.hide(plus.webview.currentWebview());
-			}
-			
-			//创建并显示新的窗口
-			function openWebview(){
-				var w=plus.webview.open("http://www.baidu.com/");
-			}
-			
 		</script>
 	</body>
 
