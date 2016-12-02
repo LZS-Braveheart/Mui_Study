@@ -511,13 +511,13 @@
 					"demos/pop-layer/js/mui.min.js",
 					"demos/pop-layer/css/mui.min.css",
 					"demos/pop-layer/css/app.css",
-					"demos/pop-layer/html/home.html"
+					"demos/pop-layer/html/home.html",
+					"demos/pop-layer/html/find.html"
 				],
 				"refer": [
 					"demos/pop-layer/html/tabbar.html",
 					"demos/pop-layer/html/message.html",
-					"demos/pop-layer/html/setting.html",
-					"demos/pop-layer/html/find.html"
+					"demos/pop-layer/html/setting.html"
 				],
 				"priority": 0
 			},
@@ -533,11 +533,10 @@
 					"demos/pop-layer/js/mui.min.js",
 					"demos/pop-layer/css/mui.min.css",
 					"demos/pop-layer/img/i-find-active.png",
-					"demos/pop-layer/img/i-person-active.png"
-				],
-				"refer": [
+					"demos/pop-layer/img/i-person-active.png",
 					"demos/pop-layer/html/menu.html"
 				],
+				"refer": [],
 				"priority": 0
 			},
 			"demos/pop-layer/html/menu.html": {

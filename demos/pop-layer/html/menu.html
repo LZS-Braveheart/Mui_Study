@@ -50,7 +50,7 @@
 		</style>
 	</head>
 	<body>
-		<div class="mui-content">
+		<div class="mui-content" style="background-color: deepskyblue;">
 	        <ul class="mui-pop">
 	            <li>
 	            	<a href="#editor">
@@ -109,6 +109,7 @@
 		
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">	
+		
 			// 获取关键词
 			mui(".mui-pop li").on('tap','a',function(){ 
 				var keyword = this.getAttribute('href').replace('#','');
@@ -124,6 +125,7 @@
 				plus.webview.currentWebview().hide();   
 				// 隐藏遮罩 
 				plus.webview.getWebviewById('mask').close();
+				
 			}
 		</script>
 	</body>

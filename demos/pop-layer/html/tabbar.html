@@ -69,6 +69,7 @@
 			//弹出菜单
 			var menuWebview;
 			var menuTab = 'menu.html';
+			var mask;
 			mui.plusReady(function(){	
 				//预加载弹出菜单子页面
 				menuWebview = mui.preload({
@@ -87,13 +88,15 @@
 				
 				// 获取当前点击的选项
 				var targetTab = this.getAttribute('href');	
+				
 				// 如果点击中间的菜单栏弹出菜单
 				if(targetTab == menuTab){
+					
 					if(window.plus){
 						
 						// 创建mask遮罩
 						plus.webview.create("","mask",{
-							mask:"rgba(0,0,0,0.4)",
+							mask:"rgba(0,0,0,0.6)",
 							background: "transparent"
 						}).show();
 						
@@ -101,8 +104,10 @@
 						plus.webview.show(menuWebview,"slide-in-bottom",10);	
 						
 					}else{
+						
 						mui.alert("请在html5+引擎环境使用");
 					}
+					
 					return;
 				}
 				
