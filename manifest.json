@@ -10,7 +10,7 @@
     "icons": {
         "72": "icon.png"
     },
-    "launch_path": "official-resources/H5+/webview.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "launch_path": "demos/M-box/index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
     "developer": {
         "name": "",/*开发者名称*/
         "email": "",/*开发者邮箱地址*/
@@ -469,6 +469,41 @@
 					"css/mui.min.css"
 				],
 				"refer": [],
+				"priority": 0
+			},
+			"official-resources/H5+/webviewDev.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"official-resources/H5+/webviewTest1.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"official-resources/H5+/webviewTest2.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"official-resources/H5+/webviewTest2.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"official-resources/H5+/webviewTestIndex.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"official-resources/H5+/webviewTest1.html"
+				],
 				"priority": 0
 			}
 		},

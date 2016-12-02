@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title></title>   
+		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<style type="text/css">
@@ -26,7 +26,6 @@
 			.self-content {
 				font-size: 13px;
 			}
-			
 		</style>
 	</head>
 
@@ -44,35 +43,60 @@
 
 		<script src="../../js/mui.min.js"></script>
 		<script type="text/javascript">
-		
-			//H5 plus事件处理      
+			//H5 plus事件处理     
+			var ws = null,
+				nw = null;
 			function plusReady() {
 				//查找应用首页窗口对象
-//				var mainPage=plus.webview.getWebviewById(plus.runtime.appid);
-//				console.log("应用首页窗口："+mainPage.getURL());
+				//				var mainPage=plus.webview.getWebviewById(plus.runtime.appid);
+				//				console.log("应用首页窗口："+mainPage.getURL());
+
+				/*监听手机返回键*/
+				ws = plus.webview.currentWebview();
+				nw = plus.webview.create("http://www.mi.com/");
+				ws.append(nw);
+				plus.key.addEventListener("backbutton", function() {
+					//查询Webview窗口是否可后退
+					nw.canBack(function(e) {
+						var canback = e.canBack;
+						if(canback) {
+							nw.back();
+						} else {
+							exit();
+						}
+					});
+				});
 			}
 			if(window.plus) {
 				plusReady();
 			} else {
 				document.addEventListener("plusready", plusReady, false);
 			}
-   
+
+			function exit() {
+				// 弹出提示信息对话框
+				plus.nativeUI.confirm("您想要退出吗？", function(e) {
+					if(e.index == 0) {
+						plus.runtime.quit();
+					}
+				}, "您想要退出吗？", ["Yes", "No"]);
+			}
+
 			//创建并显示webview
 			function create() {
 				var w = plus.webview.create("http://www.baidu.com/");
 				w.show();
 			}
-			
+
 			//隐藏webview
-			function hide(){
+			function hide() {
 				plus.webview.hide(plus.webview.currentWebview());
 			}
-			
+
 			//创建并显示新的窗口
-			function openWebview(){
-				var w=plus.webview.open("http://www.baidu.com/");
+			function openWebview() {
+				var w = plus.webview.open("http://www.baidu.com/");
 			}
-			
 		</script>
 	</body>
 

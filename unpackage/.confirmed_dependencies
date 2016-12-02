@@ -244,5 +244,36 @@
       "js/mui.min.js",
       "css/mui.min.css"
     ]
+  },
+  "official-resources/H5+/webviewDev.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ]
+  },
+  "official-resources/H5+/webviewTest1.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "official-resources/H5+/webviewTest2.html"
+    ],
+    "refer": [
+      "official-resources/H5+/webviewTest2.html"
+    ]
+  },
+  "official-resources/H5+/webviewTest2.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ]
+  },
+  "official-resources/H5+/webviewTestIndex.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "official-resources/H5+/webviewTest1.html"
+    ]
   }
 }

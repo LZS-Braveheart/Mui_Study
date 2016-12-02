@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title></title>   
+		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<style type="text/css">
@@ -26,7 +26,6 @@
 			.self-content {
 				font-size: 13px;
 			}
-			
 		</style>
 	</head>
 
@@ -44,27 +43,53 @@
 
 		<script src="../../js/mui.min.js"></script>
 		<script type="text/javascript">
-		
 			//H5 plus事件处理      
 			function plusReady() {
 				//获取当前窗口id
-				var ws=plus.webview.currentWebview();
-				console.log("当前窗口标识："+ws.id);  //输出【 当前窗口标识：HBuilder】
-				
+				/*var ws=plus.webview.currentWebview();
+				console.log("当前窗口标识："+ws.id);*/ //输出【 当前窗口标识：HBuilder】
+
 				//通过id获取webview,并关闭窗口
-				var wsq=plus.webview.getWebviewById(id);
-				plus.webview.close(wsq);
+				/*var ws=plus.webview.getWebviewById(id);
+				plus.webview.close(ws);*/
 				//等效于
-				plus.webview.getViewById(id).close();
+				/*plus.webview.getViewById(id).close();*/
+
+				var ws1 = null,
+					ws2 = null,
+					ws3 = null;
+				//获取当前所有Webview窗口
+				var ws1 = plus.webview.currentWebview();
+				console.log("~webview" + plus.webview.all().length + "~id~" + ws1.id);
+
+				setTimeout(function() {
+					ws2 = plus.webview.create("http://www.mi.com/");
+					ws2.show();
+					console.log("~webview" + plus.webview.all().length + "~id~" + ws2.id);
+				}, 100);    
+
+				setTimeout(function() {
+					ws3 = plus.webview.create("http://www.huawei.com/cn/");
+					ws3.show();
+					console.log("~webview " + plus.webview.all().length + "~id~" + ws3.id);
+				}, 3000);
+
+				setTimeout(function() {
+					ws3.close();
+					console.log("~剩余窗口数量 " + plus.webview.all().length);
+				}, 6000);
 				
-				
+				setTimeout(function() {
+					ws2.close();
+					console.log("~剩余窗口数量 " + plus.webview.all().length);
+				}, 9000);
+
 			}
 			if(window.plus) {
 				plusReady();
 			} else {
 				document.addEventListener("plusready", plusReady, false);
 			}
-   
 		</script>
 	</body>
 

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.bg-container {
+				width: 100%;
+				background-color: deepskyblue;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 8px 0;
+			}
+			
+			.self-title {
+				font-size: 16px;
+				color: red;
+				font-weight: 800;
+			}
+			
+			.self-content {
+				font-size: 13px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">webview1</h1>
+		</header>
+		<div class="mui-content">
+			测试页面AAA
+		</div>
+
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			//H5 plus事件处理
+			function plusReady() {
+				var ws=plus.webview.create("webviewTest2.html","",{top:"46px",bottom:"0px"});
+				plus.webview.currentWebview().append(ws);
+			}
+
+			if(window.plus) {
+				plusReady();
+			} else {
+				document.addEventListener("plusready", plusReady, false);
+			}
+		</script>
+	</body>
+
+</html>
