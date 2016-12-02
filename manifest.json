@@ -509,6 +509,49 @@
 			"demos/pop-layer/index.html": {
 				"resources": [
 					"demos/pop-layer/js/mui.min.js",
+					"demos/pop-layer/css/mui.min.css",
+					"demos/pop-layer/css/app.css",
+					"demos/pop-layer/html/home.html"
+				],
+				"refer": [
+					"demos/pop-layer/html/tabbar.html",
+					"demos/pop-layer/html/message.html",
+					"demos/pop-layer/html/setting.html",
+					"demos/pop-layer/html/find.html"
+				],
+				"priority": 0
+			},
+			"demos/pop-layer/html/tabbar.html": {
+				"resources": [
+					"demos/pop-layer/img/i-message.png",
+					"demos/pop-layer/img/i-message-active.png",
+					"demos/pop-layer/img/i-pop-active.png",
+					"demos/pop-layer/img/i-person.png",
+					"demos/pop-layer/img/i-home-active.png",
+					"demos/pop-layer/img/i-find.png",
+					"demos/pop-layer/img/i-home.png",
+					"demos/pop-layer/js/mui.min.js",
+					"demos/pop-layer/css/mui.min.css",
+					"demos/pop-layer/img/i-find-active.png",
+					"demos/pop-layer/img/i-person-active.png"
+				],
+				"refer": [
+					"demos/pop-layer/html/menu.html"
+				],
+				"priority": 0
+			},
+			"demos/pop-layer/html/menu.html": {
+				"resources": [
+					"demos/pop-layer/img/i-editor.png",
+					"demos/pop-layer/img/i-share.png",
+					"demos/pop-layer/img/i-more.png",
+					"demos/pop-layer/img/i-location.png",
+					"demos/pop-layer/img/i-picture.png",
+					"demos/pop-layer/img/i-camera.png",
+					"demos/pop-layer/fonts/mui.ttf",
+					"demos/pop-layer/img/i-contact.png",
+					"demos/pop-layer/img/i-headline.png",
+					"demos/pop-layer/js/mui.min.js",
 					"demos/pop-layer/css/mui.min.css"
 				],
 				"refer": [],
