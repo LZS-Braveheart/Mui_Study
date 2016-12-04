@@ -325,5 +325,11 @@
 			"demos/pop-layer/js/mui.min.js",
 			"demos/pop-layer/css/mui.min.css"
 		]
+	},
+	"demos/pop-layer/html/find.html": {
+		"resources": [
+			"demos/pop-layer/js/mui.min.js",
+			"demos/pop-layer/css/mui.min.css"
+		]
 	}
 }
