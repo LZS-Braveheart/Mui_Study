@@ -1,0 +1,45 @@
+
+@charset "utf-8";
+.mui-bar-nav {
+	background-color: #00B2EE;
+	background: -webkit-linear-gradient(top, rgba(70, 188, 98,1), rgba(70, 188, 98, 1));
+	color: #FFF;
+	padding-left: 0.18rem;padding-right: 0.18rem;
+}
+
+.mui-title {
+	color: #fff;
+}
+/*顶部栏icon,title,image样式*/
+/*返回箭头样式*/
+.mui-bar .mui-icon{
+	font-size: 0.6rem;
+	left: -0.05rem;
+	top: -0.1rem;  
+	color: #FFFFFF;
+}
+/*修改*/
+.mui-bar .mui-pull-left img{
+	 width: 0.5rem;
+}
+
+
+/*标题的样式*/
+.mui-bar .mui-title{
+	font-family: "微软雅黑";
+	font-size: 0.32rem;
+	color: #FFFFFF;
+} 
+/*右侧的功能图标的样式*/
+.mui-bar img{
+	width: 0.4rem;
+	height: 0.4rem;
+	margin-top: 0.16rem;
+	margin-right: 0.06rem;
+}
+/*修改*/
+.mui-bar .mui-pull-right img{
+	/*width: 0.5rem;*/
+}
+
+

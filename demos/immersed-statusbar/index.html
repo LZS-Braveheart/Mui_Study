@@ -1,58 +1,34 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <title>沉浸式顶部栏</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<head>
+		<meta charset="utf-8">
+		<title>沉浸式顶部栏</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-        <link rel="stylesheet" href="css/mui.min.css">
-        <style>
-			.mui-bar-nav{
-    			background-color: #00B2EE;
-    			background: -webkit-linear-gradient(top,rgba(215,75,40,1),rgba(215,75,40,0.8));
-    			color: #FFF;
-    		}
-			.mui-title{
-    			color:#fff;
-    		}
-        </style>
-    </head>
-  
-    <body>
-        <header class="mui-bar mui-bar-nav">
-            <h1 class="mui-title">沉浸式顶部栏</h1>
-        </header>
-          <!--  注意！！！
-        mui-content盒子的样式padding-top: 0px;margin-top: 0px;只能写在内部。
-                    在基座上浏览就会把mui-content盒子遮住。调试的时候不要加上，但打包成apk需要加上-->
-        <div class="mui-content" style="padding-top: 0px;margin-top: 0px;">
-           	沉浸式sdfsadfsdf
-        </div>
-        <script src="js/mui.min.js"></script>
-        <script>   
-        
-            mui.init();
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/immersed-statusbar.css" />
+		</style>
+	</head>
 
-            mui.plusReady(function() {
-            	var topoffset = '0px';
-            	// 兼容immersed状态栏模式
-            	if(plus.navigator.isImmersedStatusbar()){
-			    	var immersed = 0;
-					var ms = (/Html5Plus\/.+\s\(.*(Immersed\/(\d+\.?\d*).*)\)/gi).exec(navigator.userAgent);
-					// 当前环境为沉浸式状态栏模式
-					if(ms&&ms.length>=3){
-					    immersed = parseFloat(ms[2]);// 获取状态栏的高度
-					}
-					topoffset = (immersed + 45)+'px';
-					/*调整高度*/
-			    	document.querySelector(".mui-bar-nav").style.paddingTop = immersed+'px';
-			     	document.querySelector(".mui-bar-nav").style.height = topoffset; 
-			     	document.querySelector(".mui-content").style.marginTop = topoffset; 
-			    }
-            });
-        </script>
-    </body>
+	<body>
+	
+		<header class="mui-bar mui-bar-nav" style="padding-top: 0px;margin-top: 0px;">
+			<a class="mui-action-back mui-pull-left"><img src="images/back.png" /></a>
+			<h1 class="mui-title">华地农业</h1>
+			<a class="mui-action-back mui-pull-right"><img src="images/zhongzhishezhi.png" /></a>
+		</header>
+		<div class="mui-content" style="padding-top: 0px;margin-top: 0px;">
+		注意！！！
+		<br />
+       1、mui-content盒子的样式padding-top: 0px;margin-top: 0px;只能写在内部。<br />
+       2、在基座上浏览就会把mui-content盒子遮住。调试的时候不要加上，但打包成apk需要加上
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/immersed.js" ></script>
+		<script type="text/javascript" src="js/rem.js" ></script>
+	</body>
+
 </html>

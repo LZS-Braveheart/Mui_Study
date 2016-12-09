@@ -1,26 +1,17 @@
-(function(w){
-
-document.addEventListener('plusready',function(){
-	console.log("Immersed-UserAgent: "+navigator.userAgent);
-},false);
-
-var immersed = 0;
-var ms=(/Html5Plus\/.+\s\(.*(Immersed\/(\d+\.?\d*).*)\)/gi).exec(navigator.userAgent);
-if(ms&&ms.length>=3){
-	immersed=parseFloat(ms[2]);
-}
-w.immersed=immersed;
-
-if(!immersed){
-	return;
-}
-var t=document.getElementById('header');
-t&&(t.style.paddingTop=immersed+'px',t.style.background='-webkit-linear-gradient(top,rgba(215,75,40,1),rgba(215,75,40,0.8))',t.style.color='#FFF');
-t=document.getElementById('content');
-t&&(t.style.marginTop=immersed+'px');
-t=document.getElementById('dcontent');
-t&&(t.style.marginTop=immersed+'px');
-t=document.getElementById('map');
-t&&(t.style.marginTop=immersed+'px');
-
-})(window);
+mui.plusReady(function() {
+	var topoffset = '45px';
+	// 兼容immersed状态栏模式
+	if(plus.navigator.isImmersedStatusbar()) {
+		var immersed = 0;
+		var ms = (/Html5Plus\/.+\s\(.*(Immersed\/(\d+\.?\d*).*)\)/gi).exec(navigator.userAgent);
+		// 当前环境为沉浸式状态栏模式
+		if(ms && ms.length >= 3) {
+			immersed = parseFloat(ms[2]); // 获取状态栏的高度
+		}
+		topoffset = (immersed + 45) + 'px';
+		/*调整高度*/
+		document.querySelector(".mui-bar-nav").style.paddingTop = immersed + 'px';
+		document.querySelector(".mui-bar-nav").style.height = topoffset;
+		document.querySelector(".mui-content").style.marginTop = topoffset;
+	}
+});   
