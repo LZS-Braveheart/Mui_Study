@@ -6,39 +6,73 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
 		<link rel="stylesheet" href="css/mui.min.css" />
-		<script type="text/javascript" src="../../js/rem.js" ></script>
+		<link rel="stylesheet" href="css/main-popup.css" />
+		<script type="text/javascript" src="js/rem.js"></script>
 		<style type="text/css">
 			/*要想实现整个页面都是透明的，需要将body以及带有背景
 	    	 *颜色的元素全部设置 background: transparent */
-			body {  
+			
+			body {
 				background: transparent;
 			}
+			
+			/*清除都懂*/
+			.mui-table-view-cell.mui-collapse.mui-active {
+				margin-top: 0px
+			}
+			
+			/*重写mui.min.css*/
+			.mui-table-view-cell.mui-active {
+				background-color: #FFFFFF;
+			}
 			/*弹窗综合样式*/
+			
 			.mui-pop {
 				position: fixed;
-				top: 2rem;
-				left: 0.2rem;
+				top: 0.5rem;
+				left: 0.6rem;
 				margin: 0px;
 				padding: 0px;
 				color: #FFFFFF;
 			}
+			/*内容开始*/
+			/*调整下拉框·箭头的水平位置*/
 			
-			/*底部按钮*/
-			.closeBtn {
-				position:absolute;
-				left: 0px;
-				right: 0px;
-				bottom: 0px;
+			.mui-navigate-right:after,
+			.mui-push-right:after {
+				right: 0.05rem;
+				color: #3F3F3F;
+			}
+			/*下拉框*/
+			
+			.pull-down-menu {
+				/*下拉选项的宽度*/
+				width: 1.6rem;
+				height: 0.5rem;
+				border: 1px solid #CCCCCC;
+			}
+			
+			.mui-collapse-content .view-cell {
+				border-bottom: 1px solid #CCCCCC;
+			}
+			
+			.mui-collapse-content .cell-style {
 				text-align: center;
-				background-color: #fff;
-				cursor: pointer;
+				border-right: 1px solid #CCCCCC;
+				border-left: 1px solid #CCCCCC;
 			}
 			
-			.closeBtn span {
-				color: #ff7e00;
-				font-size: 50px;
-				padding: 5px;
+			.mui-table-view-cell>a:not(.mui-btn) {
+				padding: 0;
 			}
+			
+			.mui-table-view:after {
+				content: none;
+			}
+			/*调整箭头位置*/
+			/*下拉框结束*/
+			/*弹出框结束*/
+			/*内容结束*/
 		</style>
 	</head>
 
@@ -46,30 +80,76 @@
 		<div class="mui-content">
 			<!--弹窗内容开始-->
 			<div class="mui-pop">
-				
+				<!--内容开始-->
+
 				<!--测试输入框对软键盘的影响-->
-				<input type="" name="" id="" value="" style="color: darkblue;"/>
+				<!--弹出框-->
+				<div class="pop-up" id="pop" style="">
+					<div class="popover-top">
+						<div class="top-title">农事记录</div>
+						<div class="mui-action-back pop-close">
+							<img src="img/close.png" />
+						</div>
+					</div>
+
+					<div class="popover-type-choose" style="background-color: #FFFFFF;">
+						<div class="type-choose-one" style="z-index:10;position:absolute;">
+							<div class="pull-down-menu">
+								<div class="mui-table-view">
+									<div class="mui-table-view-cell mui-collapse" style="border: none;">
+										<a class="mui-navigate-right" href="#" style="background-color: #FFFFFF;text-align: center;font-size: 0.18rem;margin-top: -0.1rem;">选择农事类型</a>
+										<div class="mui-collapse-content" style="padding: 0px;margin-top: 0.22rem;">
+											<div class="view-cell cell-style" style="border-top: 1px solid #CCCCCC;">sadf</div>
+											<div class="view-cell cell-style">sadf</div>
+											<div class="view-cell cell-style">sadf</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="type-choose-two" style="z-index: 10;position: absolute;right: 0.38rem;">
+							<div class="pull-down-menu">
+								<div class="mui-table-view">
+									<div class="mui-table-view-cell mui-collapse" style="border: none;">
+										<a class="mui-navigate-right" href="#" style="background-color: #FFFFFF;text-align: center;font-size: 0.18rem;margin-top: -0.1rem;">选择人员</a>
+										<div class="mui-collapse-content" style="padding: 0px;margin-top: 0.22rem;">
+											<div class="view-cell cell-style" style="border-top: 1px solid #CCCCCC;">sadf</div>
+											<div class="view-cell cell-style">sadf</div>
+											<div class="view-cell cell-style">sadf</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="mui-input-row pop-input">
+						<textarea id="textarea" rows="5" placeholder="多行文本框"></textarea>
+					</div>
+					<div class="pop-camera">
+						<img src="img/xiangji.png" />
+					</div>
+					<div class="popover-confirm">
+						<button type="button" class="mui-btn">确定</button>
+					</div>
+				</div>
+
+				<!--弹出框结束-->
+				<!--内容结束-->
 			</div>
 
-			<!--底部的关闭按钮-->
-			<div class="mui-action-back closeBtn">
-				<span class="mui-icon mui-icon-closeempty"></span>
-			</div>
-			
 			<!--弹窗内容结束-->
 		</div>
 
 		<script type="text/javascript" src="js/mui.min.js"></script>
 		<script type="text/javascript">
-		
 			mui.back = function() {
 				// 隐藏遮罩 
 				plus.webview.getWebviewById('mask').close();
 				// 隐藏弹出层
-				var currentView=plus.webview.currentWebview();   
-				plus.webview.hide(currentView,'slide-out-right',1,'acceleration');
+				var currentView = plus.webview.currentWebview();
+				plus.webview.hide(currentView, 'slide-out-right', 1, 'acceleration');
 			}
-			
 		</script>
 	</body>
 

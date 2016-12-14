@@ -359,8 +359,13 @@
       "demos/tab-webview-popover/css/mui.min.css",
       "demos/tab-webview-popover/js/mui.min.js",
       "demos/tab-webview-popover/fonts/mui.ttf",
-      "js/rem.js"
-    ]
+      "js/rem.js",
+      "demos/tab-webview-popover/css/main-popup.css",
+      "demos/tab-webview-popover/img/close.png",
+      "demos/tab-webview-popover/img/xiangji.png",
+      "demos/tab-webview-popover/js/rem.js"
+    ],
+    "refer": []
   },
   "demos/tab-webview-popover/tab-webview-subpage-about.html": {
     "refer": [
@@ -390,6 +395,16 @@
       "demos/tab-webview-popover/fonts/mui.ttf",
       "demos/tab-webview-popover/css/mui.min.css",
       "demos/tab-webview-popover/js/mui.min.js"
-    ]
+    ],
+    "refer": []
+  },
+  "demos/pull-down-menu/index.html": {
+    "resources": [
+      "demos/pull-down-menu/js/mui.min.js",
+      "demos/pull-down-menu/js/rem.js",
+      "demos/pull-down-menu/css/mui.min.css",
+      "demos/pull-down-menu/fonts/mui.ttf"
+    ],
+    "refer": []
   }
 }

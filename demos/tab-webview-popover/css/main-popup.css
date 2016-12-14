@@ -1,0 +1,125 @@
+/*弹出框样式
+*/
+
+.popover-top {
+	display: flex;
+	padding-top: 0.28rem;
+}
+
+
+/*弹出框内容容器*/
+
+.pop-up {
+	width: 5.5rem;
+	border-radius: 0.1rem;
+	height: 4.6rem;
+	padding-left: 0.64rem;
+	padding-right: 0.64rem;
+	background-color: #FFFFFF;
+}
+
+
+/*标题部分容器*/
+
+.popover-top .top-title {
+	font-size: 0.3rem;
+	flex: 1;
+	font-family: "微软雅黑";
+	text-align: center;
+	color: #3F3F3F;
+}
+
+
+/*叉叉容器的样式*/
+
+.popover-top .pop-close {
+	padding: 0;
+	/*元素居中*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*偏移*/
+	margin-right: -0.29rem;
+}
+
+
+/*叉叉的样式*/
+
+.popover-top .pop-close img {
+	width: 0.3rem;
+	height: 0.3rem;
+}
+
+
+/*叉叉的样式*/
+
+.popover-top .icon-close {
+	font-size: 0.6rem;
+	flex-basis: auto;
+	flex-grow: 0;
+}
+
+
+/*下拉选择项的容器*/
+
+.popover-type-choose {
+	display: flex;
+	font-size: 0.18rem;
+	color: #a6a6a6;
+	margin-top: 0.53rem;
+	position: relative;
+}
+
+
+/*输入框容器*/
+.pop-input {
+	width: 4.1rem;    
+	height: 1.2rem;
+	font-size: 0.18rem;
+	top: 0.83rem;          
+	margin-left: 0.04rem;    
+	position: relative;  
+}
+
+.pop-input textarea {
+	height: 1.2rem;
+	padding-top: 0.1rem;
+	padding-left: 0.2rem;     
+	color: black;
+	font-size: 0.22rem;
+}
+
+
+/*照相机容器*/
+.pop-camera {
+	position: relative;
+	z-index: 10;
+}
+
+
+/*照相机*/
+
+.pop-camera img {
+	position: absolute;
+	width: 0.6rem;
+	height: 0.6rem;
+	z-index: 10;
+	top: 0.9rem;
+}
+
+
+/*确定按钮容器*/
+
+.popover-confirm {
+	position: relative;
+	top: 1.3rem;
+	right: 0.66rem;
+}
+
+.popover-confirm button {
+	position: absolute;
+	line-height: 0.3rem;
+	width: 1.2rem;
+	right: -0.65rem;
+	color: #A6A6A6;
+}
