@@ -8,41 +8,23 @@
 		<link rel="stylesheet" href="css/mui.min.css" />
 		<style type="text/css">
 		</style>
-	</head>
+	</head>  
 
 	<body>
-		<div id="pop" class="mui-popover">
-			<ul class="mui-table-view">
-				<li class="mui-table-view-cell">
-					<a href="#">自定义</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a href="#">Item2</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a href="#">Item3</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a href="#">Item4</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a href="#">Item5</a>
-				</li>
-			</ul>
-		</div>
 		<button id="openPopover" class="mui-btn mui-btn-blue mui-btn-block">打开弹出菜单</button>
 
 		<script type="text/javascript" src="js/mui.min.js"></script>
 		<script type="text/javascript">
+		
 			//弹出菜单
 			var menuWebview;
-			var menu = 'menu.html';
+			var menuWebviewUrl = 'menu.html';
 
 			mui.plusReady(function() {
 				//预加载弹出菜单子页面
 				menuWebview = mui.preload({
-					url: menu,
-					id: menu,
+					url: menuWebviewUrl,
+					id: menuWebviewUrl,
 					styles: {
 						top: '0px',
 						bottom: '0px',
@@ -52,7 +34,7 @@
 			})
 
 			//选项卡点击事件
-			var test = mui('#openPopover')[0].addEventListener('tap', function() {
+			mui('#openPopover')[0].addEventListener('tap', function() {
 				if(window.plus) {
 					// 创建mask遮罩
 					plus.webview.create("", "mask", {
@@ -60,7 +42,7 @@
 						background: "transparent"
 					}).show();
 					// 打开弹出层
-					plus.webview.show(menu,"slide-in-bottom", 100,'acceleration');
+					plus.webview.show(menuWebviewUrl,"slide-in-bottom", 100,'acceleration');
 				} else {
 					mui.alert("请在html5+引擎环境使用");
 				}

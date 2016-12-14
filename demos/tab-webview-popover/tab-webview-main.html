@@ -11,55 +11,19 @@
 		<link rel="stylesheet" href="css/mui.min.css" />
 		
 		<style>
-		
 			html,
 			body {
 				background-color: #efeff4;
 			}
-			
-			.mui-popover {
-				position: fixed;
-				width: 80%;
-				height: auto;
-				border-radius: 0;
-				left: 50%;
-				top: 50%;
-				margin: 0 auto;
-				z-index: 9999;
-				background-color: #fff;
-				-webkit-transform: translateX(-50%) translateY(-50%);
-				-moz-transform: translateX(-50%) translateY(-50%);
-				-ms-transform: translateX(-50%) translateY(-50%);
-				transform: translateX(-50%) translateY(-50%);
-			}
-			
 		</style>
 	</head>
 
 	<body>
+		
 		<header class="mui-bar mui-bar-nav">
 			<h1 id="title" class="mui-title">首页</h1>
 		</header>
-		<!--弹窗-->
-		<div id="pop" class="mui-popover">
-			<ul class="mui-table-view">
-				<li class="mui-table-view-cell">
-					<a href="#">自定义</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a href="#">Item2</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a href="#">Item3</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a href="#">Item4</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a href="#">Item5</a>
-				</li>
-			</ul>
-		</div>
+		
 		<!--弹窗结束-->
 		<nav class="mui-bar mui-bar-tab">
 			<a id="defaultTab" class="mui-tab-item mui-active" href="tab-webview-subpage-about.html">
@@ -81,20 +45,24 @@
 		</nav>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript" charset="utf-8">
+		
 			//mui初始化
 			mui.init();
+			
 			/*子页面数组*/
 			var subpages = ['tab-webview-subpage-about.html', 'tab-webview-subpage-chat.html', 'tab-webview-subpage-contact.html', 'tab-webview-subpage-setting.html'];
+			
 			/*子页面样式*/
 			var subpage_style = {
 				top: '45px',
 				bottom: '51px'
 			};
-
+			
 			var aniShow = {};
 
 			//创建子页面，首个选项卡页面显示，其它均隐藏；
 			mui.plusReady(function() {
+				
 				//获取当前页面所属的webview窗口对象
 				var self = plus.webview.currentWebview();
 				for(var i = 0; i < 4; i++) {
@@ -112,15 +80,19 @@
 					self.append(sub);
 				}
 			});
+			
 			//当前激活选项
 			var activeTab = subpages[0];
+			
 			var title = document.getElementById("title");
+			
 			//选项卡点击事件
 			mui('.mui-bar-tab').on('tap', 'a', function(e) {
 				var targetTab = this.getAttribute('href');
 				if(targetTab == activeTab) {
 					return;
 				}
+				
 				//更换标题
 				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
 				//显示目标选项卡
@@ -151,31 +123,7 @@
 					current.classList.remove('mui-active');
 					defaultTab.classList.add('mui-active');
 				}
-			});
-
-			//test
-			document.addEventListener('Test', function() {
-				alert("asdf");
-			});
-
-			//弹窗
-			var mask = mui.createMask(function() {
-				pop.classList.remove('mui-active');
-			});
-
-			// 显示
-			//			mui('#openPopover')[0].addEventListener('tap', function() {
-			//				mask.show(); //显示遮罩  
-			//				pop.classList.add('mui-active');
-			//			})
-			var title = document.getElementById('title');
-						var mask = mui.createMask(function(){
-				pop.classList.remove('mui-active');
-			});
-			title.addEventListener('tap', function() {
-				mask.show(); //显示遮罩  
-				pop.classList.add('mui-active');
-			});
+			});   
 		</script>
 	</body>
 
