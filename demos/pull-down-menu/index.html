@@ -11,42 +11,49 @@
 		<!--标准mui.css-->
 		<link rel="stylesheet" href="css/mui.min.css">
 		<!--App自定义的css-->
-		<link rel="stylesheet" type="text/css" href="css/app.css"/>
-		<script type="text/javascript" src="js/rem.js" ></script>
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<script type="text/javascript" src="js/rem.js"></script>
 		<style>
-			.pull-down-menu{
-				width:2rem;
+			.pull-down-menu {
+				width: 2rem;
 				border: 1px solid #CCCCCC;
 			}
-			.mui-collapse-content .view-cell{
+			
+			.mui-collapse-content .view-cell {
 				border-bottom: 1px solid #CCCCCC;
 			}
-			.mui-collapse-content .cell-style{
+			
+			.mui-collapse-content .cell-style {
 				text-align: center;
 			}
-			.mui-table-view-cell>a:not(.mui-btn){
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
 				padding: 0;
 			}
-			.mui-table-view:after{
-				content:none;
+			
+			.mui-table-view:after {
+				content: none;
+			}
+			.mui-table-view-cell.mui-collapse.mui-active {
+				margin-top: 0px
 			}
 		</style>
 	</head>
+
 	<body>
 		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">下拉菜单</h1>
 		</header>
-		
+
 		<div class="mui-content" style="display: flex;justify-content: center;padding-top: 2rem;">
 			<div class="pull-down-menu">
 				<div class="mui-table-view">
 					<div class="mui-table-view-cell mui-collapse" style="border: none;">
 						<a class="mui-navigate-right" href="#" style="background-color: #FFFFFF;text-align: center;">表单</a>
 						<div class="mui-collapse-content" style="padding: 0px;">
-							<div class="view-cell cell-style" style="border-top: 1px solid #CCCCCC;">sadf</div>
-							<div class="view-cell cell-style">sadf</div>
-							<div class="cell-style">sadf</div>
+							<div class="view-cell cell-style" style="border-top: 1px solid #CCCCCC;">Tom</div>
+							<div class="view-cell cell-style">Mike</div>
+							<div class="cell-style">Jerry</div>
 						</div>
 					</div>
 				</div>
@@ -55,7 +62,7 @@
 		<script src="js/mui.min.js"></script>
 		<script>
 			mui.init({
-				swipeBack:true //启用右滑关闭功能
+				swipeBack: true //启用右滑关闭功能
 			});
 		</script>
 	</body>

@@ -10,7 +10,7 @@
     "icons": {
         "72": "icon.png"
     },
-    "launch_path": "demos/tab-webview-popover/tab-webview-main.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "launch_path": "demos/pull-down-menu/index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
     "developer": {
         "name": "",/*开发者名称*/
         "email": "",/*开发者邮箱地址*/
@@ -633,6 +633,14 @@
 					"demos/pull-down-menu/js/rem.js",
 					"demos/pull-down-menu/css/mui.min.css",
 					"demos/pull-down-menu/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"demos/popover-control-self/index.html": {
+				"resources": [
+					"demos/popover-control-self/js/mui.min.js",
+					"demos/popover-control-self/css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0

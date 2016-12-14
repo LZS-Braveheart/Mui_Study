@@ -406,5 +406,11 @@
       "demos/pull-down-menu/fonts/mui.ttf"
     ],
     "refer": []
+  },
+  "demos/popover-control-self/index.html": {
+    "resources": [
+      "demos/popover-control-self/js/mui.min.js",
+      "demos/popover-control-self/css/mui.min.css"
+    ]
   }
 }
